@@ -31,13 +31,6 @@ echo "==========================================="
 echo "   Medusa Cloud9 installer"
 echo "==========================================="
 
-read -p "This will install Docker & deploy LinuxServer Cloud9. Continue? [Y/n]: " yn
-yn=${yn:-Y}
-if [[ ! $yn =~ ^[Yy]$ ]]; then
-  echo "Aborted."
-  exit 0
-fi
-
 # Ensure we're root (or running under sudo)
 if (( EUID != 0 )); then
   echo "Please run as root (or via sudo)."
